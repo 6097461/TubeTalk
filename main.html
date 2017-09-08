@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tube Talk</title>
+	<meta charset="utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css"/>
+	<section class="main_head">
+		<div id="bar">Tube Talk<div class="btn"></div></div>
+		<div class="history"></div><div id="setbtn"></div>
+		<div onclick="history.back();" class="page_cover"></div>
+		<div id="online"></div>
+	</section>
+	<div class="setbar">설정<div class="back"></div></div>
+</head>
+<section class="header">
+	<header><h1>Tube Talk</h1></header>
+</section>
+<body>
+<section class="main">
+	<ul id="chatlog"></ul>
+	<div id="now"></div>
+	<input id="name" type="text" readonly>
+	<form class="chatunder">
+		<div id="plusbtn"></div>	
+		<input id="message" autocomplete="off"/>
+		<button id="chatbtn">Send</button>
+	</form>
+    <div id="mask"></div>
+    <div id="pluspopup">
+	<div class="plusclose"></div>
+		<div id="camera">
+			<img src="image/camera.png" width="30px" height="30px"/>
+			&nbsp;&nbsp;&nbsp;카메라<br/><br/>
+		</div>
+		<div id="gallery">
+			<img src="image/gallery.png" width="30px" height="30px"/>
+			&nbsp;&nbsp;&nbsp;갤러리<br/><br/>
+		</div>
+		<div id="call">
+			<img src="image/call.png" width="30px" height="30px"/>
+			&nbsp;&nbsp;&nbsp;전화 걸기<br/><br/>
+		</div>		
+		<div id="map">
+			<img src="image/map.png" width="30px" height="30px"/>
+			&nbsp;&nbsp;&nbsp;지도
+		</div>
+    </div>
+</section>
+<section class="joinbody">
+<img id="joinimg" src="image/join.png" width="50%"/>
+ <section class="join">
+  <input type="text" id="jemail" placeholder=" Enter your e-mail"/>
+  <br/> <br/>
+  <input type="text" id="jnickname" placeholder=" Enter your nickname"/>
+  <br/> <br/>
+  <input type="password" id="jpass" placeholder=" Enter your password"/>
+  <br/> <br/>
+  <input type="password" id="jpasscon" placeholder=" Confirm your password"/>
+  <br/>
+  <br/>
+  <button id="join">JOIN</button>
+  <button id="loginp">LOGIN</button>
+ </section>
+</section>
+<section class="loginbody">
+	<img id="loginimg" src="image/login.png" width="70%"/>
+         <section class="login">
+        <input id="lemail" type="text" placeholder=" e-mail"/>
+        <br/></br>
+        <input id="lpass" type="password" placeholder=" password"/>
+        <br/>
+        <br/>
+        <button id="login">LOGIN</button>
+        <button id="joinp">JOIN</button>
+        </section>
+</section>
+<section class="set">
+	<div id="background"><div id="setting"><div class="settingbar">알림 설정</div></div></div>
+	<div id="setting">메시지 알림 
+		<div id="check"><label class="switch"><input class="switch-input-message" type="checkbox" checked/><span class="switch-label" data-on="On" data-off="Off"></span>
+<span class="switch-handle"></span></label></div>
+		<div class="explain">메시지가 왔을 때 알림을 설정합니다.</div></div><hr height="1" color="#f5f5f5"/>
+	<div id="setting">귓속말 알림 <div id="check"><label class="switch"><input class="switch-input-whisper" type="checkbox" checked/><span class="switch-label" data-on="On" data-off="Off"></span>
+<span class="switch-handle"></span></label></div><br/>
+		<div class="explain">귓속말이 왔을 때 알림을 설정합니다.</div></div>
+
+	<div id="background"><div id="setting"><div class="settingbar">꾸미기 설정</div></div></div>
+
+	<div id="setting">배터리 배경 이미지 <div id="check"><label class="switch"><input class="switch-input-back" type="checkbox" checked/><span class="switch-label" data-on="On" data-off="Off"></span>
+<span class="switch-handle"></span></label></div>
+		<div class="explain">디바이스의 배터리 잔량에 따라<br/>배경 이미지를 바꿉니다.</div></div>
+	<hr height="1" color="#f5f5f5"/>
+
+    <div id="setting">글씨 크기 조절 <div id="check"><label class="switch"><input class="switch-input-font" type="checkbox" checked/><span class="switch-label" data-on="On" data-off="Off"></span> 
+<span class="switch-handle"></span></label></div> 
+        <div class="explain">볼륨키를 눌러서 글씨 크기를 조절합니다.</div></div> 
+	<div id="background"><div id="setting"><div class="settingbar">계정 정보</div></div></div>
+	<div id="setting">계정<div class="explain_account"></div></div><hr height="1" color="#f5f5f5"/>
+	<div id="setting">디바이스 정보<div class="explain_device"></div></div><hr height="1" color="#f5f5f5"/>
+</section>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	 <script src="https://maps.googleapis.com/maps/api/js?key=Your_API_Key"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="http://192.168.0.23:3000/socket.io/socket.io.js"></script>
+</body>
+</html> 

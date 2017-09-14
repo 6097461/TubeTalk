@@ -387,7 +387,6 @@ function xml2jsonCurrentWth(nx, ny){
             var indexS = myXML.indexOf('"body":{"items":{'),
                 indexE = myXML.indexOf("}]}"),
                 result = myXML;
-//                result = myXML.substring(indexS, indexE);
             var jsonObj = $.parseJSON('[' + result + ']'),
                 rainsnow = jsonObj[0].response.body.items.item[0].obsrValue,
                 sky = jsonObj[0].response.body.items.item[4].obsrValue,
@@ -401,7 +400,7 @@ function xml2jsonCurrentWth(nx, ny){
         });
  
 }
-// xml2jsonCurrentWth
+
  
 function rplLine(value){
     if (value != null && value != "") {
@@ -409,37 +408,6 @@ function rplLine(value){
     }else{
         return value;
     }
-}
-// rplLine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -457,16 +425,7 @@ alert('습도111');
 alert('습도22222');
                 if (results.weather.length) {
 
-// alert('습도'+results.main.humidity);
-// alert('description'+results.name);
-// alert('온도'+results.main.temp);
-// alert('visibility'+results.weather[0].main);
-					
-                    // $('#description').text(results.name);
-                    // $('#temp').text(results.main.temp);
-                    // $('#wind').text(results.wind.speed);
-                    // $('#humidity').text(results.main.humidity);
-                    // $('#visibility').text(results.weather[0].main);
+
 var obj=text(results.name);
 obj=JSONtoString(obj);
 alert(obj);
@@ -486,35 +445,6 @@ alert(obj);
 
 
 
-// Get weather by using coordinates
-
-
-
-// Error callback
-
-
-
-
-// $('#map').click(function(){
-	// $('#pluspopup, #mask').css("display", "none");
-	// // var output = document.getElementById("chatlog");
-
-	// if (!navigator.geolocation){
-		// alert("위치정보 기능을 지원하지 않습니다!");
-		// return;
-	// }
-	// function success(position) {
-		// var latitude  = position.coords.latitude;
-		// var longitude = position.coords.longitude;
-
-		// var time = getTimeStamp();
-		// socket.emit('send map', $('#name').val(), latitude, longitude, time);
-	// };
-	// function error() {
-		// alert("사용자의 위치를 찾을 수 없습니다.");
-	// };
-	// navigator.geolocation.getCurrentPosition(success, error);
-// }); 
 $('#camera').click(function(){
 	$('#pluspopup, #mask').css("display", "none");
 	takePicture();
